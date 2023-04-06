@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block content %}
+    <img style="max-width: 50px;" src="{{ project.featured_image.url }}"
+
+    <h1>{{project.title}}</h1>
+    <hr>
+    
+    {% for i in tag %}
+        <span style="border:1px solid grey">{{i}}</span>
+    {% endfor %}
+        
+    <hr>
+    <p>{{project.description}}</p>
+
+    {% endblock content %}
+        
+</body>
+</html>
